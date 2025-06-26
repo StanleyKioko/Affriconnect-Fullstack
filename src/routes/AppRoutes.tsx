@@ -5,7 +5,8 @@ import ChatAnalyticsPage from '../pages/ChatAnalyticsPage';
 import ServiceListingsPage from '../pages/ServiceListingsPage';
 import FeedbackPage from '../pages/FeedbackPage';
 import SettingsPage from '../pages/SettingsPage';
-import StadiumFinderPage from '../pages/StadiumFinderPage'; // Add this import
+import StadiumFinderPage from '../pages/StadiumFinderPage';
+import VisitorCenterPage from '../pages/VisitorCenterPage';
 
 const AppRoutes: React.FC = () => {
   return (
@@ -15,7 +16,8 @@ const AppRoutes: React.FC = () => {
       <Route path="/services" element={<ServiceListingsPage />} />
       <Route path="/feedback" element={<FeedbackPage />} />
       <Route path="/settings" element={<SettingsPage />} />
-      <Route path="/stadium-finder" element={<StadiumFinderPage />} /> {/* Add this route */}
+      <Route path="/stadium-finder" element={<StadiumFinderPage />} />
+      <Route path="/visitor-center" element={<VisitorCenterPage />} />
     </Routes>
   );
 };

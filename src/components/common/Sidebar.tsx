@@ -18,13 +18,14 @@ const Sidebar: React.FC = () => {
   const location = useLocation();
   
   const navItems: NavItem[] = [
-  { name: 'Dashboard', path: '/', icon: 'dashboard' },
-  { name: 'Stadium Finder', path: '/stadium-finder', icon: 'stadium' }, // Add this item
-  { name: 'Chat Analytics', path: '/chat-analytics', icon: 'chat' },
-  { name: 'Service Listings', path: '/services', icon: 'services' },
-  { name: 'Feedback', path: '/feedback', icon: 'feedback' },
-  { name: 'Settings', path: '/settings', icon: 'settings' },
-];
+    { name: 'Dashboard', path: '/', icon: 'dashboard' },
+    { name: 'Stadium Finder', path: '/stadium-finder', icon: 'stadium' },
+    { name: 'Visitor Center', path: '/visitor-center', icon: 'visitor' },
+    { name: 'Chat Analytics', path: '/chat-analytics', icon: 'chat' },
+    { name: 'Service Listings', path: '/services', icon: 'services' },
+    { name: 'Feedback', path: '/feedback', icon: 'feedback' },
+    { name: 'Settings', path: '/settings', icon: 'settings' },
+  ];
 
   return (
     <aside className={`sidebar ${isOpen ? '' : 'sidebar-collapsed'}`}>
