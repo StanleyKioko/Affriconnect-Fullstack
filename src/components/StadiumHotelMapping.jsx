@@ -1,24 +1,26 @@
 import React from 'react';
 
-interface HotelInfo {
-  name: string;
-  stars: number;
-  description: string;
-  distance: string; // Distance from stadium
-  priceRange: string;
-  amenities: string[];
-  imageUrl: string;
-}
+/**
+ * @typedef {Object} HotelInfo
+ * @property {string} name
+ * @property {number} stars
+ * @property {string} description
+ * @property {string} distance
+ * @property {string} priceRange
+ * @property {string[]} amenities
+ * @property {string} imageUrl
+ */
 
-interface StadiumInfo {
-  name: string;
-  location: string;
-  capacity: string;
-  upcomingEvents?: Array<{title: string, date: string}>;
-  nearbyHotels: HotelInfo[];
-}
+/**
+ * @typedef {Object} StadiumInfo
+ * @property {string} name
+ * @property {string} location
+ * @property {string} capacity
+ * @property {{title: string, date: string}[]=} upcomingEvents
+ * @property {HotelInfo[]} nearbyHotels
+ */
 
-const stadiumData: StadiumInfo[] = [
+const stadiumData = [
   {
     name: "Moi International Sports Centre, Kasarani",
     location: "Nairobi",
@@ -78,8 +80,7 @@ const stadiumData: StadiumInfo[] = [
   }
   // Add more stadiums here
 ];
-
-const StadiumHotelMapping: React.FC = () => {
+const StadiumHotelMapping = () => {
   return (
     <div className="stadium-hotel-container">
       <h2 className="text-2xl font-semibold mb-2">Stadium & Accommodation Finder</h2>

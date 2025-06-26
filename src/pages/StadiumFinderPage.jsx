@@ -2,7 +2,7 @@ import React from 'react';
 import DashboardLayout from '../components/layout/DashboardLayout';
 import StadiumHotelMapping from '../components/StadiumHotelMapping';
 
-const StadiumFinderPage: React.FC = () => {
+const StadiumFinderPage = () => {
   return (
     <DashboardLayout>
       <div className="page-header">

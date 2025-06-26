@@ -15,7 +15,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #111827;
 }
 
-/* Custom components styling */
+
 /* Glass morphism card styling */
 .glass-morphism {
   background-color: rgba(255, 255, 255, 0.95);
@@ -496,4 +496,476 @@ h1, h2, h3, h4, h5, h6 {
 .hotel-price {
   font-weight: 600;
   color: #1f2937;
+}
+
+/* Chat Analytics Page Styling */
+.chat-analytics-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Page Header */
+.page-header {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-title p {
+  margin-top: 0.25rem;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.date-selector {
+  display: flex;
+  align-items: center;
+}
+
+.date-selector select {
+  min-width: 150px;
+}
+
+/* Stats Section */
+.stats-overview-section {
+  margin-bottom: 0.5rem;
+}
+
+/* Analytics Section */
+.chart-card {
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mini-select {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  background-color: white;
+}
+
+.tab-btn {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.25rem;
+  background-color: white;
+}
+
+.tab-btn.active {
+  background-color: #1e5631;
+  color: white;
+  border-color: #1e5631;
+}
+
+.chart-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+/* Language Legend */
+.language-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.legend-label {
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+/* Trend Metrics */
+.trend-metrics {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.trend-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e5631;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Placeholder Chart (can be replaced with an actual chart component) */
+.trend-chart {
+  flex-grow: 1;
+}
+
+.placeholder-chart {
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.placeholder-chart .bar {
+  width: 12%;
+  background-color: #34D399;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Queries Section */
+.queries-section {
+  padding: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.query-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.query-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+.query-rank {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e5631;
+  min-width: 2rem;
+  text-align: center;
+}
+
+.query-title {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.query-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+}
+
+.query-count {
+  color: #6b7280;
+}
+
+.query-trend {
+  font-weight: 500;
+}
+
+.query-trend.up {
+  color: #059669;
+}
+
+.query-trend.down {
+  color: #ef4444;
+}
+
+/* Detailed Metrics Section */
+.detailed-metrics {
+  margin-bottom: 1rem;
+}
+
+.metric-card {
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.metric-header {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.metric-list {
+  list-style: none;
+  padding: 0;
+}
+
+.metric-item {
+  margin-bottom: 1rem;
+}
+
+.topic-name {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.topic-bar-container {
+  height: 0.5rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  position: relative;
+}
+
+.topic-bar {
+  height: 100%;
+  background-color: #1e5631;
+  border-radius: 0.25rem;
+  position: relative;
+}
+
+.topic-percentage {
+  position: absolute;
+  right: 0.25rem;
+  top: -1.25rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Engagement Stats */
+.engagement-stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.engagement-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-circle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: rgba(30, 86, 49, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e5631;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Conversion Funnel */
+.conversion-funnel {
+  padding-top: 1rem;
+}
+
+.funnel-step {
+  margin-bottom: 1rem;
+}
+
+.step-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.step-name {
+  font-size: 0.875rem;
+}
+
+.step-count {
+  font-weight: 500;
+}
+
+.funnel-bar {
+  height: 0.5rem;
+  background-color: #1e5631;
+  border-radius: 0.25rem;
+}
+
+.funnel-rate {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px dashed #e5e7eb;
+}
+
+.rate-label {
+  font-weight: 500;
+}
+
+.rate-value {
+  font-weight: 700;
+  color: #1e5631;
+}
+
+/* User Satisfaction */
+.satisfaction-section {
+  padding: 1.5rem;
+}
+
+.satisfaction-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.satisfaction-score {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score-circle {
+  text-align: center;
+}
+
+.circular-chart {
+  width: 150px;
+  height: 150px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #e5e7eb;
+  stroke-width: 3;
+}
+
+.circle {
+  fill: none;
+  stroke: #1e5631;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.percentage {
+  fill: #1e5631;
+  font-size: 0.5em;
+  text-anchor: middle;
+  font-weight: 700;
+}
+
+.score-label {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.satisfaction-breakdown {
+  flex-grow: 1;
+}
+
+.rating-item {
+  margin-bottom: 1rem;
+}
+
+.rating-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.rating-emoji {
+  font-size: 1.25rem;
+}
+
+.rating-bar-container {
+  height: 0.5rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  position: relative;
+}
+
+.rating-bar {
+  height: 100%;
+  background-color: #1e5631;
+  border-radius: 0.25rem;
+}
+
+.rating-percentage {
+  position: absolute;
+  right: 0;
+  top: -1.25rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .satisfaction-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .query-grid {
+    grid-template-columns: 1fr;
+  }
 }
