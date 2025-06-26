@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+    body {
+      font-family: 'Inter', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1519750783824-4e76e64e6b97?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-blend-mode: overlay;
+    }
+    .sidebar {
+      transition: all 0.3s ease-in-out;
+    }
+    .sidebar-hidden {
+      transform: translateX(-100%);
+    }
+    .card {
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #1a3c34 0%, #2e6b5a 100%);
+    }
+    .content-overlay {
+      background: rgba(255, 255, 255, 0.97);
+      border-radius: 12px;
+    }
+    .active-link {
+      background-color: #10B981;
+      color: white;
+    }
+    .tooltip {
+      visibility: hidden;
+      position: absolute;
+      background: #333;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      z-index: 10;
+    }
+    .sidebar a:hover .tooltip {
+      visibility: visible;
+    }
+    .action-btn {
+      transition: background-color 0.2s;
+    }
+    .action-btn:hover {
+      background-color: #059669;
+    }
