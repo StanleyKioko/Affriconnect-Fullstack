@@ -33,18 +33,18 @@ const DashboardPage: React.FC = () => {
         </div>
       </div>
       
-      {/* Stats Overview - Top Cards */}
+            {/* Stats Overview - Top Cards */}
       <div className="content-overlay glass-morphism mb-6 transform transition-all duration-300 hover:shadow-lg">
         <div className="p-5">
           <h3 className="text-lg font-semibold mb-4 text-gray-700">
             Key Metrics
           </h3>
-          <GridLayout columns={4}>
+          <div className='flex flex-nowrap overflow-x-auto gap-4 pb-2'>
             <StatsOverview title="Active Users" value="12,345" change="+15%" />
             <StatsOverview title="Service Requests" value="4,567" change="+8%" />
             <StatsOverview title="Resolved Complaints" value="789" change="+10%" />
             <StatsOverview title="Total Revenue" value="$45,239" change="+15%" />
-          </GridLayout>
+          </div>
         </div>
       </div>
       
