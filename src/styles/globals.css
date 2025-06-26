@@ -969,3 +969,24 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Add these styles to ensure horizontal layout for stats */
+.stats-horizontal-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px; /* For scrollbar space */
+}
+
+.stats-horizontal-container > div {
+  flex: 1 0 240px; /* Prevents shrinking below 240px, allows growing */
+  min-width: 0; /* Allows flex items to shrink below content size */
+}
+
+/* Ensure responsiveness on small screens */
+@media (max-width: 768px) {
+  .stats-horizontal-container {
+    flex-wrap: nowrap; /* Keep items in a single row, allow horizontal scrolling */
+  }
+}

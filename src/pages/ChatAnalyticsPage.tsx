@@ -96,29 +96,29 @@ const ChatAnalyticsPage: React.FC = () => {
         
         {/* Stats overview in a horizontal grid */}
         <section className="stats-overview-section">
-          <GridLayout columns={4}>
-            <StatsOverview 
-              title="Total Chats" 
-              value={currentStats.totalChats} 
-              change={currentStats.totalChange} 
-            />
-            <StatsOverview 
-              title="Active Users" 
-              value={currentStats.activeUsers} 
-              change={currentStats.activeChange} 
-            />
-            <StatsOverview 
-              title="Response Rate" 
-              value={currentStats.responseRate} 
-              change={currentStats.responseRateChange} 
-            />
-            <StatsOverview 
-              title="Avg. Response Time" 
-              value={currentStats.responseTime} 
-              change={currentStats.responseTimeChange} 
-            />
-          </GridLayout>
-        </section>
+  <div className="stats-horizontal-container">
+    <StatsOverview 
+      title="Total Chats" 
+      value={currentStats.totalChats} 
+      change={currentStats.totalChange} 
+    />
+    <StatsOverview 
+      title="Active Users" 
+      value={currentStats.activeUsers} 
+      change={currentStats.activeChange} 
+    />
+    <StatsOverview 
+      title="Response Rate" 
+      value={currentStats.responseRate} 
+      change={currentStats.responseRateChange} 
+    />
+    <StatsOverview 
+      title="Avg. Response Time" 
+      value={currentStats.responseTime} 
+      change={currentStats.responseTimeChange} 
+    />
+  </div>
+</section>
         
         {/* Two column layout for charts and analytics */}
         <section className="analytics-section">
