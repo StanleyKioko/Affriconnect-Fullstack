@@ -16,8 +16,8 @@ const ChatAnalytics: React.FC = () => {
         </div>
         <div className="w-full md:w-1/2">
           <h4 className="text-base font-medium">Language Breakdown</h4>
-          <div className="mt-2 h-48">
-            <LanguageChart />
+          <div className="mt-2">
+            <LanguageChart height={150} />
           </div>
         </div>
       </div>

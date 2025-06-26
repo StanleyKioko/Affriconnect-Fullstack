@@ -15,27 +15,45 @@ const Sidebar: React.FC = () => {
   ];
 
   return (
-    <div className={`sidebar w-64 bg-white shadow-lg flex flex-col gradient-bg text-white p-6 ${!isOpen ? 'sidebar-hidden' : ''}`} role="navigation" aria-label="Main navigation">
-      <div className="flex items-center mb-8">
-        <img src="https://i.imgur.com/9ZqVGFm.png" alt="AfriConnect Logo" className="w-10 h-10 mr-2" />
-        <h1 className="text-2xl font-bold">AfriConnect</h1>
+    <div 
+      className={`sidebar ${!isOpen ? 'sidebar-hidden' : ''}`} 
+      role="navigation" 
+      aria-label="Main navigation"
+    >
+      <div className="flex items-center justify-center py-6 mb-6 border-b border-white/10">
+        <img src="https://i.imgur.com/9ZqVGFm.png" alt="AfriConnect Logo" className="w-10 h-10 mr-3" />
+        <h1 className="text-2xl font-bold text-white">AfriConnect</h1>
       </div>
-      <nav className="flex-1">
-        <ul>
-          {navItems.map((item) => (
-            <li key={item.path} className="mb-4">
-              <Link 
-                to={item.path} 
-                className={`flex items-center p-3 rounded hover:bg-green-600 ${location.pathname === item.path ? 'active-link' : ''}`}
-                aria-current={location.pathname === item.path ? 'page' : undefined}
-              >
-                <span className="mr-2">{item.icon}</span> {item.label}
-                <span className="tooltip ml-2">{item.tooltip}</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      
+      <div className="px-4">
+        <nav className="flex-1">
+          <ul className="space-y-1">
+            {navItems.map((item) => (
+              <li key={item.path} className="tooltip-trigger">
+                <Link 
+                  to={item.path} 
+                  className={`nav-link ${location.pathname === item.path ? 'active-link' : ''}`}
+                  aria-current={location.pathname === item.path ? 'page' : undefined}
+                >
+                  <span className="text-xl mr-3">{item.icon}</span>
+                  <span>{item.label}</span>
+                  <span className="tooltip">{item.tooltip}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+      
+      <div className="mt-auto px-4 py-6 border-t border-white/10">
+        <div className="flex items-center">
+          <img src="https://i.imgur.com/8Km9tLL.png" alt="Admin" className="w-8 h-8 rounded-full border-2 border-white" />
+          <div className="ml-3">
+            <p className="text-white font-medium">Admin User</p>
+            <p className="text-white/70 text-sm">Super Admin</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
