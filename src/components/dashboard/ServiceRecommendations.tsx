@@ -23,32 +23,78 @@ const ServiceRecommendations: React.FC = () => {
     },
   ];
 
+  const getStatusClass = (status: string) => {
+    switch (status.toLowerCase()) {
+      case 'booked':
+        return 'bg-green-100 text-green-800';
+      case 'pending':
+        return 'bg-yellow-100 text-yellow-800';
+      case 'cancelled':
+        return 'bg-red-100 text-red-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const getServiceIcon = (service: string) => {
+    if (service.toLowerCase().includes('restaurant')) {
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M7 10h10M7 14h10M12 2v20M2 6h20v12H2z" />
+        </svg>
+      );
+    } else if (service.toLowerCase().includes('boda')) {
+      return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="7" cy="17" r="2" />
+          <circle cx="17" cy="17" r="2" />
+          <path d="M7 12h5l2 2.5h3" />
+        </svg>
+      );
+    }
+    
+    return (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="18" height="18" x="3" y="3" rx="2" />
+        <path d="M7 7h.01M12 7h.01M17 7h.01" />
+      </svg>
+    );
+  };
+
   return (
-    <div className="content-overlay p-8 rounded-lg mb-8" role="region" aria-label="Service Recommendations">
-      <h3 className="text-xl font-semibold mb-4">Recent Service Recommendations</h3>
-      <div className="overflow-x-auto">
-        <table className="w-full text-left text-base">
-          <thead>
-            <tr className="text-gray-600">
-              <th className="p-3">User Query</th>
-              <th className="p-3">Recommended Service</th>
-              <th className="p-3">Location</th>
-              <th className="p-3">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {recommendations.map((rec, index) => (
-              <tr key={index}>
-                <td className="p-3">{rec.query}</td>
-                <td className="p-3">{rec.service}</td>
-                <td className="p-3">{rec.location}</td>
-                <td className={`p-3 ${rec.status === 'Booked' ? 'text-green-600' : 'text-yellow-600'}`}>
+    <div className="recommendations-container">
+      <div className="mb-6 flex flex-wrap gap-5">
+        {recommendations.map((rec, index) => (
+          <div key={index} className="recommendation-card">
+            <div className="recommendation-header">
+              <div className="recommendation-icon">
+                {getServiceIcon(rec.service)}
+              </div>
+              <div className="recommendation-titles">
+                <h4 className="recommendation-service">{rec.service}</h4>
+                <span className={`status-badge ${getStatusClass(rec.status)}`}>
                   {rec.status}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                </span>
+              </div>
+            </div>
+            
+            <div className="recommendation-details">
+              <div className="recommendation-detail">
+                <span className="detail-label">Query:</span>
+                <span className="detail-value">{rec.query}</span>
+              </div>
+              <div className="recommendation-detail">
+                <span className="detail-label">Location:</span>
+                <span className="detail-value">{rec.location}</span>
+              </div>
+            </div>
+            
+            <div className="recommendation-actions">
+              <button className="action-button primary">View Details</button>
+              <button className="action-button secondary">Contact</button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
