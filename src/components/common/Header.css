@@ -2,146 +2,201 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Header Container */
-
+/* Header Container with AFCON-inspired styling */
 .app-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 64px;
+  height: 80px; /* Increased height for prominence */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  padding: 0 24px;
+  background: linear-gradient(90deg, #0a1a2f, #1e5631); /* Navy to green gradient for AFCON vibe */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 100;
+  color: #ffffff; /* White text for contrast */
 }
 
 /* Left side of header */
 .header-left {
   display: flex;
   align-items: center;
+  gap: 16px; /* Consistent spacing */
 }
 
 .sidebar-toggle {
   background: none;
   border: none;
-  color: #4b5563;
-  font-weight: 500;
-  font-size: 14px;
-  padding: 8px;
-  margin-right: 16px;
-  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .sidebar-toggle:hover {
-  color: #3b82f6;
-  background-color: rgba(59, 130, 246, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+  color: #ff0000; /* Kenyan red for hover */
+  transform: scale(1.1); /* Subtle zoom effect */
 }
 
 .sidebar-toggle:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+  outline: 2px solid #ff0000;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.3);
 }
 
 .header-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #1f2937;
+  font-size: 24px; /* Bolder for branding */
+  font-weight: 700;
+  color: #ffffff;
   margin: 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 /* Right side of header */
 .header-right {
   display: flex;
   align-items: center;
+  gap: 16px;
 }
 
 .search-container {
   position: relative;
-  margin-right: 16px;
 }
 
 .search-input {
-  width: 240px;
-  padding: 8px 16px;
-  border: 1px solid #e5e7eb;
-  border-radius: 6px;
-  background-color: #f9fafb;
+  width: 280px; /* Wider for usability */
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1); /* Glassy effect */
+  color: #ffffff;
   font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Subtle placeholder */
 }
 
 .search-input:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  border-color: #ff0000; /* Kenyan red */
+  box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .header-actions {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
 .notification-button {
   position: relative;
-  padding: 8px 12px;
+  padding: 10px 14px;
   border: none;
   background: none;
-  color: #4b5563;
+  color: #ffffff;
   font-size: 14px;
-  font-weight: 500;
-  border-radius: 6px;
+  font-weight: 600;
+  border-radius: 8px;
   cursor: pointer;
-  margin-right: 16px;
+  transition: all 0.3s ease;
 }
 
 .notification-button:hover {
-  background-color: #f9fafb;
-  color: #3b82f6;
+  background: rgba(255, 255, 255, 0.15);
+  color: #ff0000;
+  transform: scale(1.1);
+}
+
+.notificationV
+.notification-button:focus {
+  outline: 2px solid #ff0000;
+  outline-offset: 2px;
 }
 
 .notification-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-left: 4px;
-  background-color: #ef4444;
-  color: white;
+  margin-left: 6px;
+  background: #ff0000; /* Kenyan red */
+  color: #ffffff;
   border-radius: 50%;
-  height: 16px;
-  width: 16px;
-  font-size: 10px;
+  height: 20px;
+  width: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .user-menu {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .user-avatar {
-  width: 28px;
-  height: 28px;
+  width: 36px; /* Larger for better visibility */
+  height: 36px;
   border-radius: 50%;
-  border: 1px solid #e5e7eb;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
 }
 
 .user-name {
-  margin-left: 8px;
-  font-size: 14px;
-  font-weight: 500;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Accessibility enhancements */
+[aria-label] {
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .user-name {
-    display: none;
+  .app-header {
+    height: 72px; /* Slightly shorter for mobile */
+    padding: 0 16px;
+  }
+  
+  .header-title {
+    font-size: 20px;
   }
   
   .search-input {
-    width: 180px;
+    width: 200px;
+  }
+  
+  .user-name {
+    display: none;
   }
 }
 
@@ -151,10 +206,10 @@
   }
   
   .header-title {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .search-container {
-    display: none; /* Hide search on very small screens */
+    width: 160px; /* Smaller but still visible */
   }
 }
