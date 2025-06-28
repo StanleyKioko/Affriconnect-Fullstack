@@ -1,6 +1,7 @@
 import React from 'react';
 import DashboardLayout from '../components/layout/DashboardLayout';
 import StadiumHotelMapping from '../components/StadiumHotelMapping';
+import './stadium-finder.css';
 
 const StadiumFinderPage = () => {
   return (

@@ -5,6 +5,7 @@ import HotelFinder from '../components/HotelFinder';
 import MapExplorer from '../components/MapExplorer';
 import HealthcareFacilities from '../components/HealthcareFacilities';
 import EntertainmentVenues from '../components/EntertainmentVenues';
+import './visitor-center.css';
 
 const VisitorCenterPage = () => {
   const [activeTab, setActiveTab] = useState('matches');

@@ -26,7 +26,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
               </div>
             </div>
           </main>
-          <footer className="py-4 px-6 lg:px-8 text-center border-t border-[#d1d5db] bg-[#ffffff] backdrop-blur-sm">
+          {/*<footer className="py-4 px-6 lg:px-8 text-center border-t border-[#d1d5db] bg-[#ffffff] backdrop-blur-sm">
             <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
               <p className="text-sm text-[#4b5563] font-medium">
                 © {new Date().getFullYear()} AfriConnect - AFCON 2027. All rights reserved.
@@ -55,7 +55,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
                 </a>
               </nav>
             </div>
-          </footer>
+          </footer> */}
         </div>
       </div>
     </div>
