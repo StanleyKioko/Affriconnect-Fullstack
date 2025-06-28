@@ -11,36 +11,48 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   const { isOpen } = useContext(SidebarContext);
 
   return (
-    <div className="flex h-screen bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+    <div className="flex h-screen bg-[#f5f6f5] overflow-hidden">
       <Sidebar />
-      <div 
-        className="flex-1 flex flex-col transition-all duration-300 ease-in-out"
-        style={{ marginLeft: isOpen ? '280px' : '0' }}
+      <div
+        className="flex-1 flex flex-col transition-all duration-300 ease-in-out main-content"
+        style={{ marginLeft: isOpen ? '280px' : '88px' }}
       >
         <Header />
-        <main className="p-6 md:p-8 flex-1 overflow-y-auto">
+        <main className="p-4 md:p-6 lg:p-8 flex-1 overflow-y-auto main-content">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 gap-6 animate-fade-in-up">
               {children}
             </div>
           </div>
         </main>
-        <footer className="py-4 px-8 text-center border-t border-gray-200 bg-white/80 backdrop-blur-sm">
-          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-sm text-gray-500">
-              &copy; {new Date().getFullYear()} AfriConnect. All rights reserved.
+        <footer className="py-4 px-6 lg:px-8 text-center border-t border-[#d1d5db] bg-[#ffffff] backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-[#4b5563] font-medium">
+              © {new Date().getFullYear()} AfriConnect - AFCON 2027. All rights reserved.
             </p>
-            <div className="flex items-center space-x-4 mt-2 sm:mt-0">
-              <a href="#" className="text-gray-500 hover:text-primary transition-colors">
+            <nav className="flex items-center space-x-6">
+              <a
+                href="/privacy"
+                className="text-[#4b5563] hover:text-[#006400] transition-colors duration-200 font-medium"
+                aria-label="View Privacy Policy"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-500 hover:text-primary transition-colors">
+              <a
+                href="/terms"
+                className="text-[#4b5563] hover:text-[#006400] transition-colors duration-200 font-medium"
+                aria-label="View Terms of Service"
+              >
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-500 hover:text-primary transition-colors">
+              <a
+                href="/contact"
+                className="text-[#4b5563] hover:text-[#006400] transition-colors duration-200 font-medium"
+                aria-label="Contact Us"
+              >
                 Contact Us
               </a>
-            </div>
+            </nav>
           </div>
         </footer>
       </div>
