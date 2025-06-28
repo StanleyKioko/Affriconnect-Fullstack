@@ -4,23 +4,23 @@
 
 /* Base styling with AFCON-inspired colors */
 body {
-  background-color: #f5f6f5; /* Softer neutral background for better contrast */
-  color: #1a1a1a; /* Darker text for readability */
+  background-color: #f5f6f5;
+  color: #1a1a1a;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600; /* Bolder headings for hierarchy */
+  font-weight: 600;
   letter-spacing: -0.02em;
-  color: #0a1a2f; /* Deep navy for headings, inspired by Kenyan flag */
+  color: #0a1a2f;
 }
 
-/* Glass morphism card with enhanced vibrancy */
+/* Glass morphism card */
 .glass-morphism {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
-  border-radius: 1rem; /* Softer, modern corners */
+  border-radius: 1rem;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -30,14 +30,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .glass-morphism:hover {
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-  transform: translateY(-0.5rem); /* Subtle lift effect */
+  transform: translateY(-0.5rem);
 }
 
-/* Stat card with AFCON-themed accents */
+/* Stat card */
 .stat-card {
   position: relative;
   overflow: hidden;
-  border-left: 4px solid #006400; /* Kenyan green for borders */
+  border-left: 4px solid #006400;
   border-radius: 0.75rem;
   padding: 1.5rem;
   background: #ffffff;
@@ -50,17 +50,17 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   width: 25%;
   height: 0.3rem;
-  background: linear-gradient(to right, #006400, #ff0000); /* Kenyan flag gradient */
+  background: linear-gradient(to right, #006400, #ff0000);
 }
 
-/* Action buttons with football-inspired energy */
+/* Action buttons */
 .action-btn {
-  padding: 0.75rem 1.5rem; /* Larger touch target */
+  padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   color: #ffffff;
-  background: linear-gradient(90deg, #006400, #008000); /* Vibrant green gradient */
+  background: linear-gradient(90deg, #006400, #008000);
   transition: all 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -72,11 +72,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .action-btn:focus {
-  outline: 2px solid #ff0000; /* Red outline for accessibility */
+  outline: 2px solid #ff0000;
   outline-offset: 2px;
 }
 
-/* Header with AFCON branding */
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -92,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0.5rem;
   padding: 0.75rem 1.25rem;
   background-color: #f9fafb;
-  width: 18rem; /* Slightly wider for usability */
+  width: 18rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -102,13 +102,13 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 0 4px rgba(0, 100, 0, 0.2);
 }
 
-/* Sidebar with AFCON-inspired dark theme */
+/* Sidebar */
 .sidebar {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, #0a1a2f, #1e5631); /* Navy to green gradient */
+  background: linear-gradient(180deg, #0a1a2f, #1e5631);
   color: #ffffff;
-  width: 280px; /* Slightly wider for comfort */
+  width: 280px;
   height: 100vh;
   position: fixed;
   left: 0;
@@ -119,10 +119,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar-collapsed {
-  width: 88px; /* Slightly wider for icons */
+  width: 88px;
 }
 
-/* Sidebar navigation with hover effects */
+/* Sidebar navigation */
 .sidebar-nav {
   list-style: none;
   padding: 0;
@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar-logo img {
-  max-height: 40px; /* Slightly larger logo */
+  max-height: 40px;
 }
 
 .sidebar-logo-text {
@@ -168,13 +168,13 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link:hover {
   background: rgba(255, 255, 255, 0.15);
   color: #ffffff;
-  transform: translateX(0.25rem); /* Subtle slide effect */
+  transform: translateX(0.25rem);
 }
 
 .nav-link.active {
-  background: rgba(255, 0, 0, 0.3); /* Red for active state */
+  background: rgba(255, 0, 0, 0.3);
   color: #ffffff;
-  border-left: 4px solid #ff0000; /* Kenyan red */
+  border-left: 4px solid #ff0000;
 }
 
 .nav-icon {
@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-/* Sidebar footer with subtle branding */
+/* Sidebar footer */
 .sidebar-footer {
   margin-top: auto;
   padding: 1.25rem;
@@ -209,7 +209,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-/* Tooltip for collapsed sidebar with better visibility */
+/* Tooltip for collapsed sidebar */
 .sidebar-tooltip {
   position: relative;
 }
@@ -231,6 +231,30 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Main content with footer fix */
+.main-content {
+  margin-top: 80px; /* Matches header height */
+  margin-left: 280px; /* Matches sidebar width */
+  padding: 0; /* Let main and footer handle padding */
+  flex: 1; /* Ensure it takes available space */
+  display: flex;
+  flex-direction: column; /* Stack main and footer */
+  min-height: calc(100vh - 80px); /* Account for header height */
+  transition: margin-left 0.3s ease;
+}
+
+.main-content-expanded {
+  margin-left: 88px; /* Matches collapsed sidebar */
+}
+
+/* Ensure dashboard container stretches */
+.dashboard-container {
+  flex: 1; /* Take available space */
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* Ensure it fills parent */
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .sidebar {
@@ -239,28 +263,17 @@ h1, h2, h3, h4, h5, h6 {
   
   .sidebar.open {
     transform: translateX(0);
-    width: 100%; /* Full-screen sidebar on mobile */
+    width: 100%;
   }
   
   .main-content {
     margin-left: 0;
-    margin-top: 80px; /* Adjusted for larger header */
+    margin-top: 72px; /* Matches mobile header height */
   }
   
   .main-content-expanded {
     margin-left: 0;
   }
-}
-
-.main-content {
-  margin-top: 80px; /* Adjusted for header */
-  margin-left: 280px;
-  padding: 24px;
-  transition: margin-left 0.3s ease;
-}
-
-.main-content-expanded {
-  margin-left: 88px;
 }
 
 /* Utility classes */
@@ -333,11 +346,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-green-600 {
-  color: #008000; /* Brighter Kenyan green */
+  color: #008000;
 }
 
 .text-red-500 {
-  color: #ff0000; /* Kenyan red */
+  color: #ff0000;
 }
 
 .animate-fade-in-up {
@@ -373,7 +386,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Stadium-Hotel Mapping with football-inspired styling */
+/* Stadium-Hotel Mapping */
 .stadium-hotel-container {
   width: 100%;
 }
@@ -387,7 +400,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .stadium-header {
-  border-bottom: 2px solid #006400; /* Green border */
+  border-bottom: 2px solid #006400;
   padding-bottom: 1rem;
   margin-bottom: 1.25rem;
 }
@@ -458,7 +471,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: rgba(0, 100, 0, 0.8); /* Green overlay */
+  background: rgba(0, 100, 0, 0.8);
   color: #ffd700;
   padding: 0.5rem 0.75rem;
   border-top-right-radius: 0.75rem;
@@ -498,7 +511,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .amenity-tag {
-  background: #e6f3e6; /* Light green for amenities */
+  background: #e6f3e6;
   padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
   font-size: 0.8rem;
@@ -527,7 +540,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #006400;
 }
 
-/* Chat Analytics Page with modernized visuals */
+/* Chat Analytics Page */
 .chat-analytics-dashboard {
   display: flex;
   flex-direction: column;
@@ -1036,7 +1049,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Visitor Center with AFCON branding */
+/* Visitor Center */
 .visitor-center {
   display: flex;
   flex-direction: column;
@@ -1044,7 +1057,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 1.5rem;
 }
 
-/* Hero Banner with football energy */
+/* Hero Banner */
 .hero-banner {
   position: relative;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
@@ -1052,7 +1065,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
-  height: 280px; /* Taller for impact */
+  height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1067,7 +1080,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .banner-title {
-  font-size: 3rem; /* Larger for impact */
+  font-size: 3rem;
   font-weight: 800;
   margin-bottom: 0.75rem;
   text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
@@ -1080,7 +1093,7 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Visitor Tabs with modern styling */
+/* Visitor Tabs */
 .visitor-tabs {
   display: flex;
   gap: 0.75rem;
@@ -1191,7 +1204,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #0a1a2f;
 }
 
-/* Match Schedule with football flair */
+/* Match Schedule */
 .match-schedule {
   display: flex;
   flex-direction: column;
@@ -1290,7 +1303,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .match-versus {
   font-weight: 700;
-  color: #ff0000; /* Red for emphasis */
+  color: #ff0000;
 }
 
 .match-venue {
@@ -1498,7 +1511,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Accessibility enhancements */
 :focus-visible {
-  outline: 2px solid #006400;
+  outline: 2px solid #ff0000;
   outline-offset: 2px;
 }
 
