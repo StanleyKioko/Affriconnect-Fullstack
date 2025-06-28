@@ -1,0 +1,360 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Visitor Center Container */
+.visitor-center {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2rem;
+  min-height: 100%;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Hero Banner */
+.hero-banner {
+  grid-column: 1 / -1; /* Span full width */
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/src/assets/images/afcon-stadium.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.banner-content {
+  color: #ffffff;
+  padding: 2.5rem;
+  z-index: 2;
+}
+
+.banner-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
+  line-height: 1.2;
+}
+
+.banner-subtitle {
+  font-size: 1.4rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Visitor Tabs */
+.visitor-tabs {
+  grid-column: 1 / -1; /* Span full width */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.visitor-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0a1a2f;
+  background: #ffffff;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.visitor-tab:hover {
+  background: rgba(0, 100, 0, 0.1);
+  border-color: #006400;
+  transform: translateY(-3px);
+}
+
+.visitor-tab.active {
+  background: linear-gradient(135deg, #006400, #008000);
+  color: #ffffff;
+  border-color: #006400;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tab-icon {
+  font-size: 1.4rem;
+}
+
+.tab-label {
+  white-space: nowrap;
+}
+
+/* Visitor Content */
+.visitor-content {
+  grid-column: 1 / 3; /* Takes 2/3 on large screens */
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 2rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.visitor-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Visitor Help */
+.visitor-help {
+  grid-column: 3 / 4; /* Takes 1/3 on large screens */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 2rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.visitor-help:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.help-content {
+  text-align: center;
+}
+
+.help-content h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0a1a2f;
+  margin-bottom: 0.75rem;
+}
+
+.help-content p {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.emergency-contacts {
+  margin-top: 1.5rem;
+}
+
+.emergency-contacts h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0a1a2f;
+  margin-bottom: 1rem;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background: rgba(0, 100, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.contact-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0a1a2f;
+}
+
+.contact-value {
+  font-size: 0.95rem;
+  color: #006400;
+  font-weight: 700;
+}
+
+/* Action Buttons */
+.action-btn {
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.75rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #006400, #008000);
+  color: #ffffff;
+}
+
+.action-btn:hover {
+  background: linear-gradient(135deg, #008000, #00a000);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+}
+
+.action-btn:focus {
+  outline: 3px solid #ff0000;
+  outline-offset: 3px;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 1400px) {
+  .visitor-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-banner,
+  .visitor-tabs {
+    grid-column: 1 / -1; /* Full width */
+  }
+
+  .visitor-content {
+    grid-column: 1 / 3; /* 2/3 width */
+  }
+
+  .visitor-help {
+    grid-column: 3 / 4; /* 1/3 width */
+  }
+}
+
+@media (max-width: 1024px) {
+  .visitor-center {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .visitor-content,
+  .visitor-help {
+    grid-column: 1 / -1; /* Full width */
+  }
+}
+
+@media (max-width: 768px) {
+  .visitor-center {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .hero-banner {
+    height: 300px;
+  }
+
+  .banner-title {
+    font-size: 2rem;
+  }
+
+  .banner-subtitle {
+    font-size: 1.2rem;
+    max-width: 90%;
+  }
+
+  .visitor-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .visitor-tab {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .tab-icon {
+    font-size: 1.2rem;
+  }
+
+  .visitor-content,
+  .visitor-help {
+    padding: 1.5rem;
+  }
+
+  .help-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .emergency-contacts h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .visitor-center {
+    padding: 1rem;
+  }
+
+  .banner-title {
+    font-size: 1.75rem;
+  }
+
+  .banner-subtitle {
+    font-size: 1rem;
+  }
+
+  .visitor-tab {
+    font-size: 0.9rem;
+  }
+
+  .action-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Animations */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Stadium Finder Container */
+.stadium-finder {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Strict 1/3 and 2/3 columns */
+  gap: 2rem;
+  min-height: calc(100vh - 80px); /* Account for header height */
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  animation: fadeIn 0.8s ease-in-out;
+  box-sizing: border-box;
+}
+
+/* Page Header */
+.page-header {
+  grid-column: 1 / -1; /* Span full width */
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.page-header:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0a1a2f;
+  margin-bottom: 0.75rem;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: #4b5563;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Stadium Filters */
+.stadium-filters {
+  grid-column: 1 / 2; /* First column (1/3 width) */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  min-width: 0; /* Prevent overflow */
+}
+
+.stadium-filters:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0a1a2f;
+}
+
+.search-input {
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0a1a2f;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-input:hover {
+  border-color: #006400;
+  background: rgba(0, 100, 0, 0.05);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #006400;
+  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.2);
+}
+
+/* Stadium Hotel Mapping */
+.stadium-hotel-mapping {
+  grid-column: 2 / 3; /* Second column (2/3 width) */
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 2rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  min-width: 0; /* Prevent overflow */
+  display: flex;
+  flex-direction: column;
+}
+
+.stadium-hotel-mapping:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Fallback for StadiumHotelMapping content */
+.stadium-hotel-mapping > * {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .stadium-finder {
+    grid-template-columns: 1fr; /* Collapse to single column */
+    gap: 1.5rem;
+  }
+
+  .stadium-filters,
+  .stadium-hotel-mapping {
+    grid-column: 1 / -1; /* Full width */
+  }
+}
+
+@media (max-width: 768px) {
+  .stadium-finder {
+    padding: 1.5rem;
+  }
+
+  .page-header {
+    padding: 1.5rem;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .page-header p {
+    font-size: 1.1rem;
+  }
+
+  .stadium-filters {
+    padding: 1.25rem;
+  }
+
+  .stadium-hotel-mapping {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stadium-finder {
+    padding: 1rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  .filter-group label {
+    font-size: 0.9rem;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Animations */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
